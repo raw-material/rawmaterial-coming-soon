@@ -10,14 +10,14 @@ const Countdown = () => {
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      const goal = new Date("2021-01-11 00:00:00")
+      const goal = new Date(2021, 0, 11, 0, 0, 0)
       const delta = goal - new Date()
 
       setTimeLeft({
-        d: Math.floor(delta / _day),
-        h: Math.floor((delta % _day) / _hour),
-        m: Math.floor((delta % _hour) / _minute),
-        s: Math.floor((delta % _minute) / _second),
+        d: Math.floor(parseFloat(delta / _day)),
+        h: Math.floor(parseFloat((delta % _day) / _hour)),
+        m: Math.floor(parseFloat((delta % _hour) / _minute)),
+        s: Math.floor(parseFloat((delta % _minute) / _second)),
       })
     }, 1000)
 
