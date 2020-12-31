@@ -7,25 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+// import Header from "./header"
+import "@fontsource/raleway"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `RawMaterial`} /> */}
       <div
         style={{
           margin: `0 auto`,
@@ -34,12 +23,39 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <footer
+          style={{
+            color: "#fff",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "5rem",
+          }}
+        >
+          <a
+            style={{
+              textDecoration: "underline",
+              color: "#fff",
+              fontSize: "0.8rem",
+              display: "inline-block",
+              marginBottom: "0",
+            }}
+            href="mailto:info@rawmaterial.it"
+          >
+            info@rawmaterial.it
+          </a>
+          <a
+            style={{
+              textDecoration: "underline",
+              color: "#fff",
+              fontSize: "0.8rem",
+              display: "inline-block",
+              marginBottom: "0",
+            }}
+            href="mailto:rawmaterial@mypec.eu"
+          >
+            rawmaterial@mypec.eu
+          </a>
         </footer>
       </div>
     </>

@@ -37,6 +37,10 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
+          name: "viewport",
+          content: "initial-scale=1.0, width=device-width",
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -74,7 +78,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `it`,
   meta: [],
   description: ``,
 }

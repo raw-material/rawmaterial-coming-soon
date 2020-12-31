@@ -19,6 +19,18 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  font-family: Raleway, -apple-system, BlinkMacSystemFont, Helvetica, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 24px;
+  background: #333;
+  text-align: center;
+}
 article,
 aside,
 details,
@@ -119,6 +131,7 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  object-fit: contain !important;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -398,6 +411,8 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  text-align: center;
+  color: #f5ff0f;
 }
 pre {
   margin-left: 0;
@@ -594,4 +609,15 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+span.countdown-item {
+  color: #fff;
+  font-size: 1.25rem;
+}
+span.countdown-item + span.countdown-item {
+  margin-left: 0.5rem;
+}
+footer a:hover,
+footer a:focus {
+  color: #eee;
 }

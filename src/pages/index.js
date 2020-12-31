@@ -1,21 +1,48 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Countdown from "../components/Countdown"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <SEO title="RawMaterial" />
+    <h1
+      style={{
+        textAlign: "center",
+        position: "absolute",
+        width: "1px",
+        height: "1px",
+        padding: 0,
+        margin: "-1px",
+        overflow: "hidden",
+        clip: "rect(0, 0, 0, 0)",
+        whiteSpace: "nowrap",
+        border: 0,
+      }}
+    >
+      RawMaterial
+    </h1>
+    <div style={{ margin: `5rem auto`, maxWidth: 600 }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <div style={{ margin: `5rem 0` }}>
+      <p
+        style={{
+          textAlign: "center",
+          color: "#f5ff0f",
+          textTransform: "uppercase",
+          fontSize: "2rem",
+          marginTop: "3rem",
+        }}
+      >
+        Coming soon
+      </p>
+    </div>
+    <div style={{ margin: `5rem 0` }}>
+      <Countdown />
+    </div>
   </Layout>
 )
 
